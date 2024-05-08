@@ -1,0 +1,29 @@
+public class DesplazamientoIzquierda {
+    public static void main(String[] args) {
+        // Desplazamiento a la izquierda de 2 por 2 bits
+        int resultado1 = realizarDesplazamiento(2, 2);
+        System.out.println("Resultado 1: " + resultado1); // Resultado: 8
+
+        // Desplazamiento a la izquierda de 2 por -2 bits
+        int resultado2 = realizarDesplazamiento(2, -2);
+        System.out.println("Resultado 2: " + resultado2); // Resultado: -2147483648
+
+        // Desplazamiento a la izquierda de 12 por -2 bits
+        int resultado3 = realizarDesplazamiento(12, -2);
+        System.out.println("Resultado 3: " + resultado3); // Resultado: 0
+    }
+
+    public static int realizarDesplazamiento(int numero, int desplazamiento) {
+        int resultado = 0;
+        if (desplazamiento >= 0) {
+            for (int i = 0; i < desplazamiento; i++) {
+                resultado = numero * 2;
+            }
+        } else {
+            for (int i = 0; i > desplazamiento; i--) {
+                resultado = numero / 2;
+            }
+        }
+        return resultado;
+    }
+}
