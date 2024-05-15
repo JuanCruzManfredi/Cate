@@ -1,0 +1,496 @@
+1) 
+public class HolaMundo {
+    public static void main(String[] args) {
+        System.out.println("Hola mundo");
+    }
+}
+
+2)
+import java.util.Scanner;
+
+public class NombreApellido {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Ingrese su nombre: ");
+        String nombre = scanner.nextLine();
+
+        System.out.print("Ingrese su apellido: ");
+        String apellido = scanner.nextLine();
+
+        System.out.println("Nombre completo: " + nombre + " " + apellido);
+
+        scanner.close();
+    }
+}
+
+3) 
+import java.util.Scanner;
+
+public class OperacionesNumeros {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Ingrese el primer número: ");
+        int num1 = scanner.nextInt();
+
+        System.out.print("Ingrese el segundo número: ");
+        int num2 = scanner.nextInt();
+
+        int suma = num1 + num2;
+        int producto = num1 * num2;
+        int diferencia = num1 - num2;
+        int cociente = num1 / num2;
+        int resto = num1 % num2;
+
+        System.out.println("Suma: " + suma);
+        System.out.println("Producto: " + producto);
+        System.out.println("Diferencia: " + diferencia);
+        System.out.println("Cociente: " + cociente);
+        System.out.println("Resto: " + resto);
+
+        scanner.close();
+    }
+}
+
+4) 
+import java.util.Scanner;
+
+public class CompararNumeros {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Ingrese el primer número: ");
+        int num1 = scanner.nextInt();
+
+        System.out.print("Ingrese el segundo número: ");
+        int num2 = scanner.nextInt();
+
+        if (num1 > num2) {
+            System.out.println("El primer número es mayor que el segundo.");
+        } else if (num1 < num2) {
+            System.out.println("El primer número es menor que el segundo.");
+        } else {
+            System.out.println("Ambos números son iguales.");
+        }
+
+        scanner.close();
+    }
+}
+
+5) 
+import java.util.Scanner;
+
+public class TresNumeros {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Ingrese el primer número: ");
+        int num1 = scanner.nextInt();
+
+        System.out.print("Ingrese el segundo número: ");
+        int num2 = scanner.nextInt();
+
+        System.out.print("Ingrese el tercer número: ");
+        int num3 = scanner.nextInt();
+
+        int suma = num1 + num2 + num3;
+        double promedio = suma / 3.0;
+        int producto = num1 * num2 * num3;
+
+        int menor = Math.min(num1, Math.min(num2, num3));
+        int mayor = Math.max(num1, Math.max(num2, num3));
+
+        System.out.println("Suma: " + suma);
+        System.out.println("Promedio: " + promedio);
+        System.out.println("Producto: " + producto);
+        System.out.println("Menor: " + menor);
+        System.out.println("Mayor: " + mayor);
+
+        scanner.close();
+    }
+}
+
+6) 
+import java.util.Scanner;
+
+public class MayorMenor {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int[] numeros = new int[5];
+        
+        for (int i = 0; i < 5; i++) {
+            System.out.print("Ingrese el número " + (i + 1) + ": ");
+            numeros[i] = scanner.nextInt();
+        }
+        
+        int mayor = numeros[0];
+        int menor = numeros[0];
+        
+        for (int num : numeros) {
+            if (num > mayor) {
+                mayor = num;
+            }
+            if (num < menor) {
+                menor = num;
+            }
+        }
+        
+        System.out.println("El número mayor es: " + mayor);
+        System.out.println("El número menor es: " + menor);
+        
+        scanner.close();
+    }
+}
+
+7) 
+import java.util.Scanner;
+
+public class ParImpar {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Ingrese un número: ");
+        int numero = scanner.nextInt();
+        
+        if (numero % 2 == 0) {
+            System.out.println("El número es par.");
+        } else {
+            System.out.println("El número es impar.");
+        }
+        
+        scanner.close();
+    }
+}
+
+8)
+import java.util.Scanner;
+
+public class Multiplo {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Ingrese el primer número: ");
+        int num1 = scanner.nextInt();
+        
+        System.out.print("Ingrese el segundo número: ");
+        int num2 = scanner.nextInt();
+        
+        if (num1 % num2 == 0) {
+            System.out.println(num1 + " es múltiplo de " + num2);
+        } else {
+            System.out.println(num1 + " no es múltiplo de " + num2);
+        }
+        
+        scanner.close();
+    }
+}
+
+9)
+import java.util.Scanner;
+
+public class ContarNumeros {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int[] numeros = new int[5];
+        
+        int positivos = 0;
+        int negativos = 0;
+        int ceros = 0;
+        
+        for (int i = 0; i < 5; i++) {
+            System.out.print("Ingrese el número " + (i + 1) + ": ");
+            numeros[i] = scanner.nextInt();
+            
+            if (numeros[i] > 0) {
+                positivos++;
+            } else if (numeros[i] < 0) {
+                negativos++;
+            } else {
+                ceros++;
+            }
+        }
+        
+        System.out.println("Cantidad de números positivos: " + positivos);
+        System.out.println("Cantidad de números negativos: " + negativos);
+        System.out.println("Cantidad de ceros: " + ceros);
+        
+        scanner.close();
+    }
+}
+
+10)
+public class PrimerosPares {
+    public static void main(String[] args) {
+        for (int i = 1; i <= 100; i++) {
+            System.out.println(i * 2);
+        }
+    }
+}
+
+11) 
+import java.util.Scanner;
+
+public class SumaExcede {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Ingrese el valor de x: ");
+        int x = scanner.nextInt();
+        
+        int suma = 0;
+        int n = 0;
+        
+        while (suma <= x) {
+            n++;
+            suma += n;
+        }
+        
+        System.out.println("El valor de n que excede a " + x + " es: " + n);
+        
+        scanner.close();
+    }
+}
+
+12) 
+public class PrimerosNaturales {
+    public static void main(String[] args) {
+        int suma = 0;
+        
+        for (int i = 1; i <= 100; i++) {
+            System.out.println(i);
+            suma += i;
+        }
+        
+        System.out.println("La suma de los primeros 100 números naturales es: " + suma);
+    }
+}
+
+13) 
+import java.util.Scanner;
+
+public class NumerosPrimos {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Ingrese el número x: ");
+        int x = scanner.nextInt();
+        
+        System.out.print("Ingrese la cantidad de números primos a encontrar (n): ");
+        int n = scanner.nextInt();
+        
+        int encontrados = 0;
+        int num = x;
+        
+        while (encontrados < n) {
+            if (esPrimo(num)) {
+                System.out.println(num);
+                encontrados++;
+            }
+            num++;
+        }
+        
+        scanner.close();
+    }
+    
+    public static boolean esPrimo(int numero) {
+        if (numero <= 1) {
+            return false;
+        }
+        
+        for (int i = 2; i <= Math.sqrt(numero); i++) {
+            if (numero % i == 0) {
+                return false;
+            }
+        }
+        
+        return true;
+    }
+}
+
+14) 
+import java.util.Scanner;
+
+public class Vocal {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Ingrese un carácter: ");
+        char caracter = scanner.next().charAt(0);
+        
+        if (esVocal(caracter)) {
+            System.out.println("El carácter ingresado es una vocal.");
+        } else {
+            System.out.println("El carácter ingresado no es una vocal.");
+        }
+        
+        scanner.close();
+    }
+    
+    public static boolean esVocal(char c) {
+        c = Character.toLowerCase(c);
+        return c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u';
+    }
+}
+
+15) 
+import java.util.Scanner;
+
+public class Digito {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Ingrese un carácter: ");
+        char caracter = scanner.next().charAt(0);
+        
+        if (Character.isDigit(caracter)) {
+            System.out.println("El carácter ingresado es un dígito entre 0 y 9.");
+        } else {
+            System.out.println("El carácter ingresado no es un dígito entre 0 y 9.");
+        }
+        
+        scanner.close();
+    }
+}
+
+16) 
+import java.util.Scanner;
+
+public class MultiplicacionSucesiva {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Ingrese el primer número: ");
+        int num1 = scanner.nextInt();
+        
+        System.out.print("Ingrese el segundo número: ");
+        int num2 = scanner.nextInt();
+        
+        int resultado = 0;
+        
+        for (int i = 0; i < Math.abs(num2); i++) {
+            resultado += num1;
+        }
+
+        if (num2 < 0) {
+            resultado = -resultado;
+        }
+        
+        System.out.println("El resultado de la multiplicación es: " + resultado);
+        
+        scanner.close();
+    }
+}
+
+17) 
+import java.util.Scanner;
+
+public class DivisionSucesiva {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Ingrese el dividendo: ");
+        int dividendo = scanner.nextInt();
+        
+        System.out.print("Ingrese el divisor: ");
+        int divisor = scanner.nextInt();
+        
+        if (divisor == 0) {
+            System.out.println("División por cero no es permitida.");
+            return;
+        }
+        
+        int cociente = 0;
+        int resto = Math.abs(dividendo);
+        int absDivisor = Math.abs(divisor);
+        
+        while (resto >= absDivisor) {
+            resto -= absDivisor;
+            cociente++;
+        }
+
+        if ((dividendo < 0 && divisor > 0) || (dividendo > 0 && divisor < 0)) {
+            cociente = -cociente;
+        }
+        
+        System.out.println("El cociente es: " + cociente);
+        System.out.println("El resto es: " + resto);
+        
+        scanner.close();
+    }
+}
+
+18) 
+import java.util.Scanner;
+
+public class ContarNumeros {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Ingrese un número entero: ");
+        int numero = scanner.nextInt();
+        
+        int contador = 0;
+        int temp = numero;
+        
+        while (temp != 0) {
+            temp /= 10;
+            contador++;
+        }
+        
+        if (numero == 0) {
+            contador = 1; // Para el caso del número 0, tiene 1 dígito
+        }
+        
+        System.out.println("La cantidad de dígitos en el número es: " + contador);
+        
+        scanner.close();
+    }
+}
+
+19) 
+import java.util.Scanner;
+
+public class ProgresionGeometrica {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Ingrese el valor de x: ");
+        int x = scanner.nextInt();
+        
+        System.out.print("Ingrese el valor de n: ");
+        int n = scanner.nextInt();
+        
+        int suma = 0;
+        
+        for (int i = 0; i <= n; i++) {
+            suma += Math.pow(x, i);
+        }
+        
+        System.out.println("La suma de la progresión geométrica es: " + suma);
+        
+        scanner.close();
+    }
+}
+
+20) 
+import java.util.Scanner;
+
+public class Serie {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Ingrese el valor de n: ");
+        int n = scanner.nextInt();
+        
+        double suma = 0.0;
+        
+        for (int i = 1; i <= n; i++) {
+            suma += (double) i / Math.pow(2, i);
+        }
+        
+        System.out.println("La suma de la serie es: " + suma);
+        
+        scanner.close();
+    }
+}
