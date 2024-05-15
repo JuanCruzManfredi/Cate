@@ -1,0 +1,99 @@
+TEST 1
+1) ¿Qué es el código de ensamblaje y el programa traductor ensamblador?
+
+El código de ensamblaje es un lenguaje de programación de bajo nivel que utiliza instrucciones simbólicas para representar operaciones máquina. El ensamblador es un programa traductor que convierte este código en lenguaje máquina ejecutable por la CPU.
+
+2) ¿Qué es la abstracción en informática?
+
+La abstracción es el proceso de simplificar la complejidad de un sistema ocultando los detalles innecesarios para enfocarse en los aspectos esenciales. Facilita la comprensión y el manejo de sistemas complejos.
+
+3) Explique los diferentes niveles de abstracción en lenguajes de programación y de algunos ejemplos de lenguajes por nivel de abstracción.
+
+Bajo nivel: Directo a la máquina, como el lenguaje ensamblador.
+Medio nivel: Mezcla características de bajo y alto nivel, como C.
+Alto nivel: Más cercano al lenguaje humano, como Java, Python.
+
+4) Defina intérprete, compilador y explique la diferencia entre estos dos conceptos.
+
+Un intérprete traduce y ejecuta el código línea por línea en tiempo real. Un compilador traduce todo el código fuente a un archivo ejecutable antes de la ejecución. La principal diferencia es que el intérprete ejecuta el código directamente, mientras que el compilador lo traduce primero para luego ejecutarlo.
+
+5) ¿Qué es un paradigma de programación? Nombre algunos de ellos.
+
+Un paradigma de programación es un estilo o enfoque de programación basado en conceptos y prácticas específicas. Algunos paradigmas incluyen:
+Imperativo (C)
+Orientado a objetos (Java, C++)
+Funcional (Haskell, Lisp)
+Lógico (Prolog)
+
+6) Explique qué es el paradigma orientado a objetos.
+
+Es un enfoque de programación basado en objetos, que son instancias de clases. Cada objeto contiene datos (atributos) y métodos (funciones). Promueve la reutilización del código, la modularidad y la abstracción.
+
+7) ¿Cómo es que Java es tan popular en tecnologías webs, si cuando se creó el lenguaje no existía Internet tal y como se la conoce en la actualidad?
+
+Java ganó popularidad por su capacidad multiplataforma, su seguridad, y por la creación de Java Applets, que permitieron la ejecución de aplicaciones en navegadores web. Además, su robustez y la capacidad de ejecución en servidores contribuyeron a su adopción en la web.
+8) Liste las características más relevantes del lenguaje y desarrolle brevemente cada una de ellas.
+
+Multiplataforma: Gracias a la Máquina Virtual de Java (JVM).
+Orientado a objetos: Facilita la modularidad y reutilización del código.
+Seguro: Tiene características como el manejo de excepciones y la eliminación automática de basura (garbage collection).
+Robusto: Maneja errores en tiempo de ejecución.
+Rendimiento aceptable: Aunque no tan rápido como el código nativo, es eficiente.
+
+9) ¿Cómo es que Java es multiplataforma y al mismo tiempo sus programas se ejecutan de una manera eficiente respecto al tiempo de ejecución?
+
+Java es multiplataforma porque el código Java se compila a bytecode, que es interpretado por la JVM en cualquier sistema operativo. La eficiencia se logra mediante Just-In-Time (JIT) compilation, que convierte bytecode a código máquina en tiempo de ejecución.
+
+10) ¿Qué es y cómo funciona la máquina virtual de Java?
+
+La JVM es una máquina virtual que ejecuta bytecode Java. Funciona como una capa de abstracción entre el código Java y el hardware del sistema, permitiendo que los programas Java se ejecuten en cualquier dispositivo que tenga una JVM instalada.
+
+TEST 2
+1) ¿Qué es un linker o cargador, y para qué sirve?
+
+Un linker es un programa que combina varios archivos de código objeto en un solo archivo ejecutable. Resuelve referencias entre estos archivos. Un cargador (loader) carga este archivo ejecutable en la memoria para su ejecución.
+
+2) ¿Cuáles son las tres zonas de memoria utilizadas por Java?
+
+Las tres zonas de memoria son:
+Heap (Montículo)
+Stack (Pila)
+Method Area (Área de Métodos)
+
+3) Explique para qué sirve la zona de memoria de datos.
+
+La zona de memoria de datos almacena variables globales y estáticas, así como información constante que puede ser usada a lo largo de la ejecución del programa.
+
+4) Explique para qué sirve la zona de memoria conocida como pila o stack.
+
+La pila almacena variables locales y parámetros de métodos. Cada vez que se invoca un método, se crea un nuevo marco en la pila. Al finalizar el método, este marco se elimina, liberando la memoria.
+
+5) Explique para qué sirve la zona de memoria conocida como montículo o heap.
+
+El montículo almacena objetos y datos dinámicos que se crean durante la ejecución del programa. La memoria del montículo se gestiona mediante técnicas como el garbage collection.
+
+6) ¿Qué es un atributo y de qué tipos de datos puede ser definido?
+
+Un atributo es una variable dentro de una clase que representa una propiedad del objeto. Puede ser de tipos primitivos (int, char, float) o de referencia (objetos, arrays).
+
+7) ¿Cuál es la diferencia entre tipos de datos primitivos y de referencia? Explique cada una de estas categorías.
+
+Primitivos: Almacenan valores simples y directos (int, float, char). Tienen un tamaño fijo y no pueden ser null.
+De referencia: Almacenan referencias a objetos en el heap. Incluyen arrays, clases y tipos como String. Pueden ser null.
+
+8) El tipo de dato String, ¿Es un tipo de dato primitivo o de referencia? Explique las particularidades correspondientes al mismo.
+
+String es un tipo de dato de referencia. Almacena una secuencia de caracteres. Aunque se comporta de manera similar a los tipos primitivos debido a su uso frecuente, es un objeto y tiene métodos asociados.
+
+9) Qué es la conversión entre tipos de datos y en qué casos resultaría útil hacer este tipo de conversión. Detalle los problemas que pueden surgir al trabajar con conversiones.
+
+La conversión de tipos (casting) es cambiar un dato de un tipo a otro, como de int a float. Es útil para operaciones aritméticas y compatibilidad entre diferentes tipos de datos. Problemas comunes incluyen pérdida de precisión y errores de tiempo de ejecución si la conversión no es compatible.
+
+10) Liste y explique las convenciones de escritura adoptado por el común denominador de programadores.
+
+CamelCase: Para nombres de variables y métodos (ej., myVariable).
+PascalCase: Para nombres de clases (ej., MyClass).
+snake_case: A veces usado en constantes (ej., MAX_VALUE).
+Indentación: Uso de 2-4 espacios o tabulaciones para organizar el código.
+Nombres descriptivos: Utilizar nombres claros y significativos para variables y métodos.
+Comentarios: Añadir comentarios para explicar partes complejas del código.
