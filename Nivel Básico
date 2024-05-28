@@ -1,0 +1,352 @@
+1) import java.util.Scanner;
+
+public class PesoEnLaLuna {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Ingrese su peso en la Tierra (kg):");
+        double pesoTierra = scanner.nextDouble();
+        double pesoLuna = pesoTierra * 0.17;
+        System.out.println("Su peso en la Luna sería: " + pesoLuna + " kg");
+    }
+}
+
+2) import java.util.Scanner;
+
+public class SumaDeDigitos {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int numero;
+        while (true) {
+            System.out.println("Ingrese un número entero de 5 dígitos:");
+            numero = scanner.nextInt();
+            if (String.valueOf(numero).length() == 5) {
+                break;
+            } else {
+                System.out.println("Número inválido, por favor ingrese un número de 5 dígitos.");
+            }
+        }
+        int suma = 0;
+        while (numero != 0) {
+            suma += numero % 10;
+            numero /= 10;
+        }
+        System.out.println("La suma de los dígitos es: " + suma);
+    }
+}
+
+3) public class CuadradosYCubos {
+    public static void main(String[] args) {
+        System.out.println("Número\tCuadrado\tCubo");
+        for (int i = 0; i <= 10; i++) {
+            System.out.println(i + "\t" + (i * i) + "\t\t" + (i * i * i));
+        }
+    }
+}
+
+4) public class CaracteresASCII {
+    public static void main(String[] args) {
+        int count = 0;
+        for (int i = 30; i <= 126; i++) {
+            System.out.print((char) i + " ");
+            count++;
+            if (count % 15 == 0) {
+                System.out.println();
+            }
+        }
+    }
+}
+
+5) public class SucesionFibonacci {
+    public static void main(String[] args) {
+        int n1 = 1, n2 = 1, n3;
+        System.out.print(n1 + " " + n2);
+        for (int i = 3; i <= 20; i++) {
+            n3 = n1 + n2;
+            System.out.print(" " + n3);
+            n1 = n2;
+            n2 = n3;
+        }
+    }
+}
+
+6) public class PoblacionMundial {
+    public static void main(String[] args) {
+        long poblacionActual = 7309784505L;
+        long crecimientoAnual = 24807909L;
+
+        for (int i = 1; i <= 5; i++) {
+            poblacionActual += crecimientoAnual;
+            System.out.println("Población después de " + i + " años: " + poblacionActual);
+        }
+    }
+}
+
+7) import java.util.Scanner;
+
+public class BilletesYMonedas {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Ingrese una cantidad en pesos:");
+        int cantidad = scanner.nextInt();
+
+        int[] billetes = {1000, 500, 200, 100, 50, 20, 10, 5, 2, 1};
+        for (int billete : billetes) {
+            if (cantidad >= billete) {
+                int cantidadBilletes = cantidad / billete;
+                cantidad = cantidad % billete;
+                System.out.println("Billetes de " + billete + ": " + cantidadBilletes);
+            }
+        }
+    }
+}
+
+8) import java.util.Scanner;
+
+public class CalculoCirculo {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Ingrese el radio del círculo:");
+        int radio = scanner.nextInt();
+
+        double pi = 3.14159;
+        double diametro = 2 * radio;
+        double circunferencia = 2 * pi * radio;
+        double area = pi * radio * radio;
+
+        System.out.println("Diámetro: " + diametro);
+        System.out.println("Circunferencia: " + circunferencia);
+        System.out.println("Área: " + area);
+    }
+}
+
+9) import java.util.Scanner;
+
+public class Factorial {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Ingrese un número entero:");
+        int numero = scanner.nextInt();
+
+        long factorial = 1;
+        for (int i = 1; i <= numero; i++) {
+            factorial *= i;
+        }
+
+        System.out.println("El factorial de " + numero + " es: " + factorial);
+    }
+}
+
+10) import java.util.Scanner;
+
+public class PagoPrestamo {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Ingrese el valor del préstamo:");
+        double prestamo = scanner.nextDouble();
+        System.out.println("Ingrese el porcentaje de interés anual:");
+        double interesAnual = scanner.nextDouble();
+        System.out.println("Ingrese el valor que desea abonar por mes:");
+        double abonoMensual = scanner.nextDouble();
+
+        double tasaMensual = interesAnual / 12 / 100;
+        int meses = 0;
+        while (prestamo > 0) {
+            prestamo = prestamo * (1 + tasaMensual) - abonoMensual;
+            meses++;
+        }
+
+        int años = meses / 12;
+        meses = meses % 12;
+
+        System.out.println("Se tardará " + años + " años y " + meses + " meses en pagar el préstamo.");
+    }
+}
+
+11) import java.util.Scanner;
+
+public class CostoLlamada {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Ingrese la duración de la llamada en minutos:");
+        int minutos = scanner.nextInt();
+
+        double costo = 5;
+        if (minutos > 5) {
+            costo += (minutos - 5) * 0.5;
+        }
+
+        System.out.println("El costo de la llamada es: " + costo + " pesos");
+    }
+}
+
+12) import java.util.Scanner;
+
+public class AñoBisiesto {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Ingrese un año:");
+        int año = scanner.nextInt();
+
+        boolean esBisiesto = (año % 4 == 0 && año % 100 != 0) || (año % 400 == 0);
+        if (esBisiesto) {
+            System.out.println(año + " es un año bisiesto.");
+        } else {
+            System.out.println(año + " no es un año bisiesto.");
+        }
+    }
+}
+
+13) import java.util.Scanner;
+
+public class NumeroCapicua {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Ingrese un número entero:");
+        int numero = scanner.nextInt();
+        int original = numero;
+        int invertido = 0;
+
+        while (numero != 0) {
+            int digito = numero % 10;
+            invertido = invertido * 10 + digito;
+            numero /= 10;
+        }
+
+        if (original == invertido) {
+            System.out.println(original + " es un número capicúa.");
+        } else {
+            System.out.println(original + " no es un número capicúa.");
+        }
+    }
+}
+
+14) import java.util.Scanner;
+
+public class FechaEnTexto {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Ingrese una fecha en formato dd mm aaaa:");
+        int dia = scanner.nextInt();
+        int mes = scanner.nextInt();
+        int año = scanner.nextInt();
+
+        String[] meses = {"", "enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"};
+        System.out.println(dia + " de " + meses[mes] + " de " + año);
+    }
+}
+
+15) import java.util.Scanner;
+
+public class ConversionSegundos {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Ingrese una cantidad de segundos:");
+        int segundosTotales = scanner.nextInt();
+
+        int horas = segundosTotales / 3600;
+        int minutos = (segundosTotales % 3600) / 60;
+        int segundos = segundosTotales % 60;
+
+        System.out.println(horas + " horas, " + minutos + " minutos, " + segundos + " segundos");
+    }
+}
+
+16) import java.util.Scanner;
+
+public class TiempoFuturo {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Ingrese una hora en formato hh:mm:ss:");
+        String[] tiempoActual = scanner.nextLine().split(":");
+        int horas = Integer.parseInt(tiempoActual[0]);
+        int minutos = Integer.parseInt(tiempoActual[1]);
+        int segundos = Integer.parseInt(tiempoActual[2]);
+
+        System.out.println("Ingrese la cantidad de segundos a añadir:");
+        int segundosAñadir = scanner.nextInt();
+
+        segundos += segundosAñadir;
+        minutos += segundos / 60;
+        segundos %= 60;
+        horas += minutos / 60;
+        minutos %= 60;
+        horas %= 24;
+
+        System.out.println("El tiempo después de añadir los segundos es: " + String.format("%02d:%02d:%02d", horas, minutos, segundos));
+    }
+}
+
+17) import java.util.Scanner;
+
+public class EcuacionSegundoGrado {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Ingrese el valor de a:");
+        double a = scanner.nextDouble();
+        System.out.println("Ingrese el valor de b:");
+        double b = scanner.nextDouble();
+        System.out.println("Ingrese el valor de c:");
+        double c = scanner.nextDouble();
+
+        double discriminante = b * b - 4 * a * c;
+
+        if (discriminante > 0) {
+            double x1 = (-b + Math.sqrt(discriminante)) / (2 * a);
+            double x2 = (-b - Math.sqrt(discriminante)) / (2 * a);
+            System.out.println("Las raíces son: " + x1 + " y " + x2);
+        } else if (discriminante == 0) {
+            double x = -b / (2 * a);
+            System.out.println("La raíz es: " + x);
+        } else {
+            System.out.println("La ecuación no tiene raíces reales.");
+        }
+    }
+}
+
+18) import java.util.Scanner;
+
+public class ConversionBinario {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Ingrese un número entero:");
+        int numero = scanner.nextInt();
+
+        System.out.println("El número en binario es: " + Integer.toBinaryString(numero));
+    }
+}
+
+19) import java.util.Scanner;
+
+public class ConversionVelocidad {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Ingrese una velocidad en Km/h:");
+        double velocidadKmH = scanner.nextDouble();
+
+        double velocidadMS = velocidadKmH * 1000 / 3600;
+        System.out.println("La velocidad en m/s es: " + velocidadMS);
+    }
+}
+
+20) import java.util.Scanner;
+
+public class FacturaArticulos {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Ingrese la cantidad de artículos vendidos:");
+        int cantidadArticulos = scanner.nextInt();
+
+        double total = 0;
+        for (int i = 1; i <= cantidadArticulos; i++) {
+            System.out.println("Ingrese la cantidad del artículo " + i + ":");
+            int cantidad = scanner.nextInt();
+            System.out.println("Ingrese el precio del artículo " + i + ":");
+            double precio = scanner.nextDouble();
+
+            double subtotal = cantidad * precio;
+            total += subtotal;
+            System.out.println("Artículo " + i + ": " + cantidad + " unidades a " + precio + " cada una. Subtotal: " + subtotal);
+        }
+        System.out.println("Total a pagar: " + total);
+    }
+}
